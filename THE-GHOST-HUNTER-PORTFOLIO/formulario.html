@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/formulario.css">
+    <title>FORMULARIO</title>
+</head>
+<body>
+    <!--CABECERA-->
+    <header class="cabecera">
+        <img src="images/logo_pacman.png" alt="Pac-Man Logo" class="logo">
+        <h1>The Ghost Hunter's Portfolio</h1>
+    </header>
+
+    <!--PARTE CENTRAL DE LA WEB-->
+    <section class="parte_central">
+
+    <!--NAVEGACIÓN-->
+        <nav class="navegacion">
+            <article class="box-nav">
+                <div class="empty-arrow"></div>
+                <a href="index.html" class="nav-link">Inicio</a>
+            </article>
+            <article class="box-nav">
+                <div class="empty-arrow"></div>
+                <a href="animaciones.html" class="nav-link">Animaciones</a>
+            </article>
+            <article class="box-nav">
+                <div class="empty-arrow"></div>
+                <a href="diseño_flex.html" class="nav-link">Diseño Flex</a>
+            </article>
+            <article class="box-nav">
+                <img src="images/flecha_pacman.png" id="flecha-pacman">
+                <a href="formulario.html" class="nav-link">Formulario</a>
+            </article>
+        </nav>
+
+        <!--CONTENIDO-->
+        <main class="contenido">
+            <div class="grid-container">
+                <section id="datos_personales">
+                    <!--FORMULARIO DATOS PERSONALES-->
+                    <form>
+                        <label>
+                            <input type="checkbox" id="consentimiento_datos" name="consentimiento" required>
+                            Acepto los términos y autorizo el uso de mis datos.
+                        </label><br><br>
+
+                        <fieldset>
+                            <legend>Datos Personales</legend>
+                            
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" pattern="[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+([ '-][a-záéíóúñ]+)*" title="El nombre debe empezar con mayúscula y solo contener letras" required><br><br>
+                            
+                            <label for="apellidos">Apellidos:</label>
+                            <input type="text" id="apellidos" name="apellidos" pattern="[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+([ '-][a-záéíóúñ]+)*" title="El apellido debe empezar con mayúscula y solo contener letras" required><br><br>
+                            
+                            <label for="direccion">Dirección:</label>
+                            <input type="text" id="direccion" name="direccion" required><br><br>
+                            
+                            <label for="telefono">Teléfono:</label>
+                            <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" required><br><br>
+                            
+                            <label for="cp">Código Postal:</label>
+                            <input type="text" id="cp" name="cp" pattern="[0-9]{5}" required><br><br>
+                            
+                            <label for="ciudad">Ciudad:</label>
+                            <input type="text" id="ciudad" name="ciudad" required><br><br>
+                            
+                            <label for="pais">País:</label>
+                            <input type="text" id="pais" name="pais" required><br><br>
+                            
+                            <label for="email">Correo Electrónico:</label>
+                            <input type="email" id="email" name="email" required><br><br>
+                            
+                            <label for="cuenta-bancaria">Cuenta Bancaria:</label>
+                            <input type="text" id="cuenta-bancaria" name="cuenta-bancaria" pattern="[A-Z]{2}[0-9]{22}" required><br><br>
+                            
+                            <input type="submit" value="Enviar">
+                            
+                        </fieldset>
+                    </form>
+                </section>
+                <section id="Aficiones">
+                    <!--FORMULARIO AFICIONES-->
+                    <form>
+                        <fieldset>
+                            <legend>Aficiones</legend>
+                            
+                            <label for="aficion1">Recorrer Laberintos:</label>
+                            <input type="checkbox" id="aficion1" name="aficiones" value="Deportes"><br><br>
+                            
+                            <label for="aficion2">Cazar fantasmas:</label>
+                            <input type="checkbox" id="aficion2" name="aficiones" value="Lectura"><br><br>
+                            
+                            <label for="aficion3">Comer puntos de XP:</label>
+                            <input type="checkbox" id="aficion3" name="aficiones" value="Viajes"><br><br>
+                            
+                            <label for="aficion4">Videojuegos:</label>
+                            <input type="checkbox" id="aficion4" name="aficiones" value="Videojuegos"><br><br>
+                            
+                            <label for="aficion5">Música:</label>
+                            <input type="checkbox" id="aficion5" name="aficiones" value="Música"><br><br>
+                            
+                            <input type="submit" value="Enviar">
+                        </fieldset>
+                    </form>
+                </section>
+                <section id="gustos_personales">
+                    <!--FORMULARIO GUSTOS PERSONALES-->
+                    <form>
+                        <fieldset>
+                            <legend>Gustos Personales</legend>
+                            
+                            <label for="comida">Comida Favorita:</label>
+                            <select id="comida" name="comida">
+                                <option value="pizza">Puntos de XP</option>
+                                <option value="hamburguesa">Cerezas</option>
+                                <option value="sushi">Fantasmas</option>
+                                <option value="pasta">Fresas</option>
+                            </select><br><br>
+                            
+                            <label for="color">Color Favorito:</label>
+                            <select id="color" name="color">
+                                <option value="rojo">Rojo</option>
+                                <option value="azul">Azul</option>
+                                <option value="verde">Verde</option>
+                                <option value="amarillo">Amarillo</option>
+                            </select><br><br>
+                            
+                            <input type="submit" value="Enviar">
+                        </fieldset>
+                    </form>
+                </section>
+                <section id="sugerencias">
+                    <!--FORMULARIO SUGERENCIAS-->
+                    <form>
+                        <fieldset>
+                            <legend>Sugerencias</legend>
+                            
+                            <label for="sugerencias">Escribe tus sugerencias:</label><br>
+                            <textarea id="sugerencias" name="sugerencias" rows="4" cols="50"></textarea><br><br>
+                            
+                            <input type="submit" value="Enviar">
+                        </fieldset>
+                    </form>
+                </section>
+            </div>
+        </main>
+    </section>
+
+    <!--PIE DE PAGINA-->
+    <footer class="pie_de_pagina">
+        © Elias Pedrosa Madrid
+    </footer>
+</body>
+</html>

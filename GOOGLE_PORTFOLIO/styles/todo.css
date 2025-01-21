@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --background_color: #ffffff;
+    --azul_google: #4285f4;
+    --rojo_google: #ea4335;
+    --amarillo_google: #fbbc05;
+    --verde_google: #34a853;
+    --bordes: #D7D5D5;
+    --botones: #f1eeee;
+    --sombras: #ACACAC;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 1vw;
+    font-family: Arial, sans-serif;
+}
+
+.icons-tecnologia{
+    height: 10vh;
+    width: 10vw;
+}

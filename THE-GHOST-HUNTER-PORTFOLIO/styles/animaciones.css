@@ -1,0 +1,245 @@
+/*VARIABLES DE LA PALETA DE COLORES*/
+:root {
+  --background: #000000; 
+  --main-text: #f3f360;
+  --highlight-color: #31ff50;
+  --content-background: #262626;
+  --border-color: #315aff;
+}
+
+/*GENERALES*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 1vw;
+  color: var(--main-text);
+  background: var(--background);
+  font-family: 'Press Start 2P', sans-serif;
+}
+h1, h2, h3 {
+  text-align: center;
+  color: var(--main-text);
+}
+
+
+/*CABECERA*/
+.cabecera {
+  background-color: var(--background);
+  height: 15vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.2vw solid var(--border-color);
+}
+.logo {
+  height: 10vh;
+  margin-right: 2vw;
+}
+h1 {
+  font-size: 2vw;
+  margin: 2vw 0;
+  color: #00ffff;
+}
+
+
+/*PARTE CENTRAL*/
+.parte_central {
+  display: flex;
+}
+
+
+/*BARRA DE NAVEGACIÓN*/
+.navegacion {
+  background-color: var(--background);
+  height: 80vh;
+  width: 15vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border: 0.2vw solid var(--border-color);
+  border-top: none;
+}
+.box-nav{
+  margin: 1vw;
+  display: flex;
+}
+#flecha-pacman{
+  align-self: center;
+  height: 3vh;
+  width: 2vw;
+}
+.empty-arrow{
+  align-self: center;
+  height: 3vh;
+  width: 2vw;
+}
+.nav-link {
+  font-size: 0.8vw;
+  align-content: center;
+  text-align: center;
+  width: 15vw;
+  height: 5vh;
+  color: var(--main-text);
+  text-decoration: none;
+}
+.nav-link:hover {
+  color: var(--highlight-color);
+}
+
+
+/*CONTENIDO*/
+.contenido {
+  background-color: var(--content-background);
+  height: 80vh;
+  width: 85vw;
+  display: flex;
+  flex-direction: column;
+  padding: 2vw;
+  border: 0.2vw solid var(--border-color);
+  border-top: none;
+  border-left: none;
+}
+
+
+/*CONTENEDOR DE LA ANIMACION*/
+.animation-section {
+  margin: auto;
+  position: relative;
+  width: 80vw;
+  height: 60vh;
+  background: rgb(0, 0, 0);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  border: 0.2vw solid var(--border-color);
+}
+
+/*CUERPO DE PACMAN*/
+.cuerpo-pacman {
+  width: 5vw;
+  height: 9vh;
+  background: rgb(220, 217, 9); /* Amarillo */
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  border: none;
+  transform: translateY(-50%) rotate(0deg);
+  animation: pacman-move 10s linear, pacman-disappear 20s linear forwards;
+
+}
+/*BOCA DE PACMAN*/
+.pacman-mouse {
+  width: 6vw;
+  height: 10vh;
+  background: rgb(0, 0, 0); /* Amarillo */
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) rotate(0deg);
+  animation: pacman-chomp 0.3s ease-in-out infinite, pacman-disappear 20s linear forwards;
+}
+
+/*PUNTOS DE XP*/
+#point-1, #point-2, #point-3 {
+  width: 1vw;
+  height: 1vw;
+  background: rgb(255, 255, 255); /* Blanco */
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#point-1{
+  animation: point-disappear 4.5s linear forwards;
+
+}
+#point-2{
+  animation: point-disappear 8.2s linear forwards;
+
+}
+#point-3{
+  animation: point-disappear 12s linear forwards;
+
+}
+#point-4{
+  width: 1.4vw;
+  height: 1.4vw;
+  background: rgb(230, 239, 134); /* Blanco */
+  border-radius: 45%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: point-disappear 15.8s linear forwards;
+}
+
+/*MOVIMIENTO DE PACMAN*/
+@keyframes pacman-move {
+  0% {
+      left: -6vw;
+  }
+  100% {
+      left: 100%;
+  }
+}
+/*DESAPARECER AL ACABAR EL RECORRIDO*/
+@keyframes pacman-disappear {
+  0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% { 
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/*APERTURA Y CIERRE DE LA BOCA*/
+@keyframes pacman-chomp {
+  0%, 100% {
+      clip-path: polygon(50% 50%, 100% 20%, 100% 80%);
+  }
+  50% {
+      clip-path: polygon(50% 50%, 100% 0%, 100% 100%);
+  }
+}
+
+/*DESAPARICION DE LOS PUNTOS DE XP*/
+@keyframes point-disappear {
+  0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+/*PIE DE PÁGINA*/
+.pie_de_pagina {
+  background-color: var(--background);
+  color: var(--main-text);
+  height: 5vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.2vw solid var(--border-color);
+  border-top: none;
+}

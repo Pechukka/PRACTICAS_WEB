@@ -1,0 +1,204 @@
+/*VARIABLES DE LA PALETA DE COLORES*/
+:root {
+    --background: #000000; 
+    --main-text: #f3f360;
+    --highlight-color: #31ff50;
+    --content-background: #262626;
+    --border-color: #315aff;
+}
+
+/*GENERALES*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-size: 1vw;
+    color: var(--main-text);
+    background: var(--background);
+    font-family: 'Press Start 2P', sans-serif; /*importo fuente de letras*/
+}
+h1, h2, h3 {
+    text-align: center;
+    color: var(--main-text);
+}
+
+
+/*CABECERA*/
+.cabecera {
+    background-color: var(--background);
+    height: 15vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.2vw solid var(--border-color);
+}
+.logo {
+    height: 10vh;
+    margin-right: 2vw;
+}
+h1 {
+    font-size: 2vw;
+    margin: 2vw 0;
+    color: #00ffff;
+}
+
+
+/*PARTE CENTRAL*/
+.parte_central {
+    display: flex;
+}
+
+
+/*BARRA DE NAVEGACIÓN*/
+.navegacion {
+    background-color: var(--background);
+    height: 80vh;
+    width: 15vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border: 0.2vw solid var(--border-color);
+    border-top: none;
+}
+.box-nav{
+    margin: 1vw;
+    display: flex;
+}
+#flecha-pacman{
+    align-self: center;
+    height: 3vh;
+    width: 2vw;
+}
+.empty-arrow{
+    align-self: center;
+    height: 3vh;
+    width: 2vw;
+}
+.nav-link {
+    font-size: 0.8vw;
+    align-content: center;
+    text-align: center;
+    width: 15vw;
+    height: 5vh;
+    color: var(--main-text);
+    text-decoration: none;
+}
+.nav-link:hover {
+    color: var(--highlight-color);
+}
+
+
+/* CONTENIDO */
+.contenido {
+    background-color: var(--content-background);
+    height: 80vh;
+    width: 85vw;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw;
+    border: 0.2vw solid var(--border-color);
+    border-top: none;
+    border-left: none;
+}
+
+/* CONTENEDOR DE LA GRILLA */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+    grid-template-rows: repeat(2, 1fr); /* Dos filas iguales */
+    gap: 2vw; /* Espaciado entre los elementos */
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* SECCIONES DENTRO DE LA GRILLA */
+.grid-container section {
+    background-color: var(--background);
+    border: 0.2vw solid var(--border-color);
+    border-radius: 0.5vw;
+    padding: 1.5vw;
+    overflow-y: auto; /* Permite scroll si el contenido excede el espacio */
+}
+
+/* FORMULARIOS */
+fieldset {
+    border: 0.1vw solid var(--border-color);
+    padding: 1vw;
+    border-radius: 0.5vw;
+}
+legend {
+    font-size: 1.2vw;
+    color: var(--highlight-color);
+    padding: 0.5vw;
+}
+input, select, textarea {
+    width: 90%;
+    margin: 0.5vw 0;
+    padding: 0.5vw;
+    font-size: 1vw;
+    border: 0.1vw solid var(--border-color);
+    border-radius: 0.3vw;
+    background-color: var(--content-background);
+    color: var(--main-text);
+}
+input[type="submit"] {
+    width: auto;
+    cursor: pointer;
+    background-color: var(--highlight-color);
+    color: var(--background);
+    border: none;
+    padding: 0.7vw 1.5vw;
+    font-size: 1vw;
+    border-radius: 0.3vw;
+    transition: background-color 0.3s;
+}
+input[type="submit"]:hover {
+    background-color: var(--main-text);
+}
+
+/*APARTADO PROTECCIÓN DE DATOS*/
+.informacion-datos {
+    font-size: 1vw;
+    color: var(--highlight-color);
+    background-color: var(--background);
+    padding: 1vw;
+    margin-bottom: 2vw;
+    border: 0.2vw solid var(--border-color);
+    border-radius: 0.5vw;
+    text-align: justify;
+}
+
+/*CHECK BOX DE CONSENTIMIENTO*/
+input[type="checkbox"] {
+    height: 1vw;
+    width: 1vw;
+    margin-right: 0.5vw;
+    border: 0.2vw solid var(--border-color);
+    cursor: pointer;
+}
+
+label {
+    display: block;
+    font-size: 1vw;
+    color: var(--main-text);
+    margin-bottom: 1vw;
+}
+
+
+
+/*PIE DE PÁGINA*/
+.pie_de_pagina {
+    background-color: var(--background);
+    color: var(--main-text);
+    height: 5vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.2vw solid var(--border-color);
+    border-top: none;
+}
