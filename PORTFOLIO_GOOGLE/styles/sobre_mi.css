@@ -1,0 +1,343 @@
+/*-----------------------------ESTILOS GENERALES--------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+
+:root {
+    --background_color: #ffffff;
+    --azul_google: #4285f4;
+    --enlaces-busquedas: #203abd;
+    --rojo_google: #ea4335;
+    --amarillo_google: #fbbc05;
+    --verde_google: #34a853;
+    --bordes: #D7D5D5;
+    --botones: #f1eeee;
+    --sombras: #ACACAC;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 1vw;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    overflow-x: hidden;
+}
+/*---------------------------ESTILOS DE CABECERA--------------------------------*/
+.cabecera{
+    height: 10vh;
+    width:80vw;
+    background-color: var(--background_color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1vw 10vw;
+}
+.nombre-logo{
+    text-decoration: none;
+}
+.cabecera > section{
+    padding: 2vw;
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+.iconos{
+    height: 4vh;
+    width: auto;
+}
+.foto_perfil {
+    height: 5vh;
+    width: auto;
+    border-radius: 10vw;
+    box-shadow: 0 0 0.2vw var(--sombras);
+}
+#E{
+    font-size: 4vw;
+    font-family: 'Poppins', sans-serif;
+}
+#L, #I, #A, #S{
+    font-size: 3vw;
+    font-family: 'Poppins', sans-serif;
+}
+#E, #A {color: var(--azul_google);}
+#L {color: var(--rojo_google);}
+#I {color: var(--amarillo_google);}
+#S {color: var(--verde_google);}
+.busqueda{
+    display: flex;
+    align-items: center;
+    border-radius: 5vw;
+    border: 0.1vw solid var(--bordes);
+    padding: 0 1vw;
+}
+.busqueda>img {
+    height: 3vh;
+    width: auto;
+}
+.busqueda_text{
+    font-size: 1.2vw;
+    height: 5vh;
+    width: 30vw;
+    border: none;
+    padding:  0 1vw;
+}
+.busqueda:hover, .busqueda:focus{
+    box-shadow: 0 0 0.2vw var(--sombras);
+}
+.busqueda_text:focus{
+    outline: none;
+}
+
+/*---------------------------ESTILOS DE NAVEGACION-----------------------------*/
+
+.navegacion{
+    height: 2vh;
+    width: 87vw;
+    margin-left: 12vw;
+    display: flex;
+    gap: 3vw;
+    align-items: center;
+}
+#pagina_actual{
+    border-bottom: 0.2vw solid black;
+}
+.enlaces{
+    padding: 0.5vw;
+    box-sizing: border-box;
+    color: #000000;
+    text-decoration: none;
+}
+
+#separador_header{
+    margin: 0.5vw 0 2vw 0;
+    border: solid var(--bordes) 0.05vw;
+}
+
+
+/*---------------------------ESTILOS DE CONTENIDO-----------------------------*/
+
+.contenido{
+    display: flex;
+    height: 71vh;
+    width:80vw;
+    margin: 1vw 20vh;
+}
+
+
+/*---------------------------ESTILOS DE PRINCIPAL-----------------------------*/
+
+.principal{
+    height: auto;
+    width: 55vw;
+}
+.resultados_de_busqueda{
+    height: 15vh;
+    margin: 3vh 0;
+}
+.resultados_de_busqueda > p{
+    width: 60vw;
+    margin-bottom: 2vh;
+}
+.quien-soy-nombre{
+    font-size: 3vw;
+    font-family: 'Comic Neue', cursive;
+    margin-bottom: 5vh;
+}
+
+/*---------------------------ESTILOS DE PRINCIPAL-----------------------------*/
+
+.principal{
+    height: auto;
+    width: 55vw;
+}
+.resultados_de_busqueda{
+    height: 15vh;
+    margin: 3vh 0;
+}
+.cabecera-articulos{
+    display: flex;
+    gap: 1vw;
+    margin-bottom: 1vh;
+}
+.logo-articulo{
+    height: 4vh;
+    width: auto;
+    border: solid 0.1vw var(--bordes);
+    border-radius: 3vw;
+}
+.enlaces-resultados_de_busqueda{
+    font-size: 1.5vw;
+    color: var(--enlaces-busquedas);
+    text-decoration: none;
+}
+.enlaces-resultados_de_busqueda:hover{
+    text-decoration: underline;
+}
+
+.resultados_de_busqueda > p{
+    width: 40vw;
+}
+
+/* ------------------- RESPONSIVE DESIGN ------------------- */
+
+/* Para pantallas pequeñas (móviles, menos de 768px) */
+@media (max-width: 768px) {
+    :root {
+        --font-size: 3vw;
+        /* Ajustar fuente para móviles */
+    }
+
+    body {
+        font-size: var(--font-size);
+        overflow-x: hidden;
+    }
+
+    .cabecera {
+        flex-wrap: nowrap;
+        /* Asegura que los elementos de la cabecera no se apilen */
+        justify-content: space-between;
+        /* Mantén los elementos distribuidos horizontalmente */
+    }
+
+    .nombre-logo {
+        font-size: 6vw;
+        white-space: nowrap;
+    }
+
+
+    .iconos {
+        height: 5vw;
+    }
+
+    .foto_perfil {
+        height: 8vw;
+    }
+
+    .busqueda {
+        width: 100%;
+        margin: 1vw 0;
+        padding: 1vw;
+    }
+
+    .busqueda_text {
+        font-size: 3vw;
+        width: 70%;
+    }
+        .quien-soy-nombre{
+        font-size: 3vh;
+    }
+    p{
+        font-size: 2vw;
+    }
+
+    .navegacion {
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        margin: 1vw 0;
+    }
+
+    .enlaces {
+        font-size: 3vw;
+    }
+
+    .contenido {
+        flex-direction: column;
+        width: 90vw;
+        margin: 2vw auto;
+    }
+
+    .principal {
+        width: 100%;
+    }
+
+    .resultados_de_busqueda>p {
+        width: 100%;
+    }
+
+    .logo-articulo {
+        height: 6vw;
+    }
+
+    .enlaces-resultados_de_busqueda {
+        font-size: 4vw;
+    }
+}
+
+/* Para tablets (entre 769px y 1024px) */
+@media (min-width: 769px) and (max-width: 1023px) {
+    :root {
+        --font-size: 1.5vw;
+    }
+
+    body {
+        font-size: var(--font-size);
+        overflow-x: hidden;
+    }
+
+    .cabecera {
+        width: 95%;
+        margin: 1vw auto;
+    }
+
+    .iconos {
+        height: 3vh;
+    }
+
+    .foto_perfil {
+        height: 5vh;
+    }
+
+    .busqueda_text {
+        width: 50%;
+    }
+
+    .contenido {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2vw;
+    }
+    .quien-soy-nombre{
+        font-size: 3vh;
+    }
+    p{
+        font-size: 2vw;
+    }
+
+    .principal {
+        width: 60%;
+    }
+
+    .resultados_de_busqueda>p {
+        width: 90%;
+    }
+
+    .enlaces-resultados_de_busqueda {
+        font-size: 2.5vw;
+    }
+}
+
+/* Para pantallas grandes (escritorio, más de 1024px) */
+@media (min-width: 1024px) {
+    body {
+        font-size: 1vw;
+        overflow-x: hidden;
+    }
+
+    .cabecera {
+        width: 80vw;
+        margin: 1vw 10vw;
+    }
+
+    .contenido {
+        flex-direction: row;
+        width: 80vw;
+        margin: 1vw auto;
+    }
+
+    .principal {
+        width: 55vw;
+    }
+}

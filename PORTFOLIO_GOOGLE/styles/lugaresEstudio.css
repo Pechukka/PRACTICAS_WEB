@@ -1,0 +1,173 @@
+/*-----------------------------ESTILOS GENERALES--------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+
+:root {
+    --background_color: #ffffff;
+    --azul_google: #4285f4;
+    --enlaces-busquedas: #203abd;
+    --rojo_google: #ea4335;
+    --amarillo_google: #fbbc05;
+    --verde_google: #34a853;
+    --bordes: #D7D5D5;
+    --botones: #f1eeee;
+    --sombras: #ACACAC;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 1vw;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    overflow-x: hidden;
+}
+/*---------------------------ESTILOS DE CABECERA--------------------------------*/
+.cabecera{
+    height: 10vh;
+    width:80vw;
+    background-color: var(--background_color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1vw 10vw;
+}
+.nombre-logo{
+    text-decoration: none;
+}
+.cabecera > section{
+    padding: 2vw;
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+.iconos{
+    height: 4vh;
+    width: auto;
+}
+.foto_perfil {
+    height: 5vh;
+    width: auto;
+    border-radius: 10vw;
+    box-shadow: 0 0 0.2vw var(--sombras);
+}
+#E{
+    font-size: 4vw;
+    font-family: 'Poppins', sans-serif;
+}
+#L, #I, #A, #S{
+    font-size: 3vw;
+    font-family: 'Poppins', sans-serif;
+}
+#E, #A {color: var(--azul_google);}
+#L {color: var(--rojo_google);}
+#I {color: var(--amarillo_google);}
+#S {color: var(--verde_google);}
+.busqueda{
+    display: flex;
+    align-items: center;
+    border-radius: 5vw;
+    border: 0.1vw solid var(--bordes);
+    padding: 0 1vw;
+}
+.busqueda>img {
+    height: 3vh;
+    width: auto;
+}
+.busqueda_text{
+    font-size: 1.2vw;
+    height: 5vh;
+    width: 30vw;
+    border: none;
+    padding:  0 1vw;
+}
+.busqueda:hover, .busqueda:focus{
+    box-shadow: 0 0 0.2vw var(--sombras);
+}
+.busqueda_text:focus{
+    outline: none;
+}
+
+/*---------------------------ESTILOS DE NAVEGACION-----------------------------*/
+
+.navegacion{
+    height: 2vh;
+    width: 87vw;
+    margin-left: 12vw;
+    display: flex;
+    gap: 3vw;
+    align-items: center;
+}
+#pagina_actual{
+    border-bottom: 0.2vw solid black;
+}
+.enlaces{
+    padding: 0.5vw;
+    box-sizing: border-box;
+    color: #000000;
+    text-decoration: none;
+}
+
+#separador_header{
+    margin: 0.5vw 0 2vw 0;
+    border: solid var(--bordes) 0.05vw;
+}
+
+/*------------------------------------------------------*/
+
+#titulo_carrusel{
+    font-size: 2vw;
+    font-family: 'Comic Neue', cursive;
+}
+
+.carrusel {
+    margin-top: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.carrusel-imagenes {
+    display: flex;
+    overflow: hidden;
+    width: 40vw;
+    height: 40vh;
+    position: relative;
+    border: solid 0.2vw #000000;
+}
+
+
+
+.carrusel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carrusel-img.visible {
+    display: block;
+}
+
+.carrusel-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    width: 10vw;
+}
+
+.carrusel-btn:hover {
+    background-color: #0c4d92;
+}
+
+.carrusel-btns {
+    display: flex;
+    gap: 5vw;
+}
